@@ -1,0 +1,28 @@
+# Ignore Python build artifacts and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore local temporary/build scripts
+*.py
+*.ps1
+
+# Ignore generated report documents & raw OCR text
+*.docx
+*.pdf
+*.txt
+*.md.bak
+Web_Technology_Assignment_2_Report.md
+
+# Ignore screenshots directory
+screenshots/
+
+# Ignore OS & IDE metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Explicitly keep README
+!README.md

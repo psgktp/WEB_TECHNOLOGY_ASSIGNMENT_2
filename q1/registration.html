@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validation.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <div class="brand-icon">&#127891;</div>
+            <h2>Student Registration</h2>
+            <p class="subtitle">Academic Admission &amp; Enrollment Portal</p>
+        </div>
+
+        <form id="registrationForm" novalidate>
+            <div class="form-group">
+                <label for="name">Student Full Name</label>
+                <div class="input-wrap">
+                    <span class="input-icon">&#128100;</span>
+                    <input type="text" id="name" placeholder="e.g. Aarav Sharma" required autofocus>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="roll">Roll Number (Numeric)</label>
+                <div class="input-wrap">
+                    <span class="input-icon">&#128279;</span>
+                    <input type="text" id="roll" placeholder="e.g. 1001" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Institutional Email</label>
+                <div class="input-wrap">
+                    <span class="input-icon">&#9993;</span>
+                    <input type="email" id="email" placeholder="student@example.edu" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Academic Program</label>
+                <div class="input-wrap">
+                    <span class="input-icon">&#127891;</span>
+                    <select id="course" required>
+                        <option value="">Select Degree Course</option>
+                        <option value="CSE">Computer Science &amp; Engineering (CSE)</option>
+                        <option value="IT">Information Technology (IT)</option>
+                        <option value="AIML">Artificial Intelligence &amp; Data Science (AIML)</option>
+                        <option value="ECE">Electronics &amp; Communication (ECE)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Create Password</label>
+                <div class="input-wrap">
+                    <span class="input-icon">&#128274;</span>
+                    <input type="password" id="password" placeholder="Min 8 chars, uppercase, lowercase, number, symbol" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Upload Document / ID Proof</label>
+                <div class="file-upload-box" id="dropzone">
+                    <div class="upload-icon">&#128193;</div>
+                    <div class="upload-text">Click to choose document or drop file here</div>
+                    <div class="upload-sub">Allowed formats: JPG, PNG, PDF (Max size: 5 MB)</div>
+                    <input type="file" id="document" accept=".jpg,.jpeg,.png,.pdf">
+                    <div id="fileSelectedPill" class="file-selected-pill"></div>
+                </div>
+            </div>
+
+            <div id="errorBox" class="error-box">
+                <span class="error-icon">&#9888;</span>
+                <span id="error" class="error"></span>
+            </div>
+
+            <button type="submit">
+                <span>Complete Registration</span>
+                <span>&rarr;</span>
+            </button>
+        </form>
+    </div>
+</body>
+</html>
